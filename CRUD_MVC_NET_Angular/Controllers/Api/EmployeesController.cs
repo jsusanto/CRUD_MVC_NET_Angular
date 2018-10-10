@@ -10,19 +10,19 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using CRUD_MVC_NET_Angular.Models;
 
-namespace CRUD_MVC_NET_Angular.Controllers
+namespace CRUD_MVC_NET_Angular.Controllers.Api
 {
-    public class EmployeesAPIController : ApiController
+    public class EmployeesController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: api/EmployeesAPI
+        // GET: api/Employees
         public IQueryable<Employee> GetEmployees()
         {
             return db.Employees;
         }
 
-        // GET: api/EmployeesAPI/5
+        // GET: api/Employees/5
         [ResponseType(typeof(Employee))]
         public IHttpActionResult GetEmployee(int id)
         {
@@ -35,7 +35,7 @@ namespace CRUD_MVC_NET_Angular.Controllers
             return Ok(employee);
         }
 
-        // PUT: api/EmployeesAPI/5
+        // PUT: api/Employees/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutEmployee(int id, Employee employee)
         {
@@ -70,7 +70,7 @@ namespace CRUD_MVC_NET_Angular.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/EmployeesAPI
+        // POST: api/Employees
         [ResponseType(typeof(Employee))]
         public IHttpActionResult PostEmployee(Employee employee)
         {
@@ -85,7 +85,7 @@ namespace CRUD_MVC_NET_Angular.Controllers
             return CreatedAtRoute("DefaultApi", new { id = employee.Id }, employee);
         }
 
-        // DELETE: api/EmployeesAPI/5
+        // DELETE: api/Employees/5
         [ResponseType(typeof(Employee))]
         public IHttpActionResult DeleteEmployee(int id)
         {

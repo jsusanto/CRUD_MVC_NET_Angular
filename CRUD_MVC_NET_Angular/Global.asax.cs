@@ -13,13 +13,13 @@ namespace CRUD_MVC_NET_Angular
     {
         protected void Application_Start()
         {
+            //Register Web API
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            //Register Web API
-            GlobalConfiguration.Configure(WebApiConfig.Register);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);            
         }
     }
 }
