@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Web.Http;
 
 namespace CRUD_MVC_NET_Angular
 {
@@ -16,6 +17,9 @@ namespace CRUD_MVC_NET_Angular
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //Register Web API
+            GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }
 }
