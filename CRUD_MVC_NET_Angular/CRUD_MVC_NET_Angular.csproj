@@ -205,8 +205,13 @@
     <Compile Include="Migrations\201810100317324_InitialModel.Designer.cs">
       <DependentUpon>201810100317324_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810100324186_AddEmployee.cs" />
+    <Compile Include="Migrations\201810100324186_AddEmployee.Designer.cs">
+      <DependentUpon>201810100324186_AddEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -287,6 +292,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201810100317324_InitialModel.resx">
       <DependentUpon>201810100317324_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810100324186_AddEmployee.resx">
+      <DependentUpon>201810100324186_AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
